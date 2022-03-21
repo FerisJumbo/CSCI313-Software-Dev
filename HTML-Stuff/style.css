@@ -1,0 +1,43 @@
+p {
+    color: green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: small;
+    font-variant: small-caps;
+}
+
+table, tr, th, td {
+    border: 2px solid black;
+}
+
+tr {
+    margin: 2px;
+}
+
+td, th {
+    margin: 2px;
+    padding: 4px;
+}
+
+td {
+    background-color: green;
+    color: white;
+    font-weight: 600;
+}
+
+ul li {
+    list-style-type: circle;
+}
+
+ol li {
+    list-style-type: decimal-leading-zero;
+}
+
+footer {
+    font-weight: 800;
+    text-align: center;
+    position: sticky;
+    background-color: black;
+    color: white;
+}
+
