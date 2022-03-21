@@ -1,0 +1,12 @@
+<div *ngIf="messageService.messages.length">
+    <div class="container fixed-bottom text-center">
+        <h2>Messages</h2>
+        <button class="button" type="button" class="clear"
+            (click)="messageService.clear()">
+            Clear Messages
+        </button>
+        <div *ngFor="let message of messageService.getLastFive()">
+            {{message}}
+        </div>
+    </div>
+</div>

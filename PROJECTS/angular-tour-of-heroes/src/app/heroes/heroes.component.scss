@@ -1,0 +1,33 @@
+.badge {
+    color: white;
+    background-color: black;
+}
+
+.no-bullet {
+    list-style-type: none;
+}
+
+.no-link {
+    text-decoration: none;
+    color: black;
+}
+
+.hover-section:hover {
+    background-color: rgba(0, 0, 0, 0.050);
+    box-shadow: 2px 2px 2rem;
+    .badge {
+        background-color: rgba(0, 0, 0, 0.850);
+    }
+}
+
+.delete {
+    color: red;
+    border: 1px solid rgba(255, 0, 0, 0.300);
+    background-color: rgba(255, 0, 0, 0.150);
+    float: right;
+}
+
+.delete:hover {
+    border: 1px solid rgba(255, 0, 0, 0.350);
+    background-color: rgba(255, 0, 0, 0.300);
+}

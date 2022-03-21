@@ -1,0 +1,18 @@
+<div id="search-component">
+  <div class="card">
+    <div class="container mt-2 pb-1 mb-1">
+      <div class="input-group">
+        <label for="search-box" class="input-group-text">Search Heroes:</label>
+        <input type="text" placeholder="Hero name" class="form-control" #searchBox id="search-box" (input)="search(searchBox.value)" />
+      </div>
+    </div>
+
+    <div class="container">
+      <button *ngFor="let hero of heroes$ | async"
+        class="button bg-dark text-white m-3"
+        routerLink="/detail/{{hero.id}}">
+        {{hero.name}}
+      </button>
+    </div>
+  </div>
+</div>
