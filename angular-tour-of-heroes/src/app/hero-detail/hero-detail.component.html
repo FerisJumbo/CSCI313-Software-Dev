@@ -1,13 +1,15 @@
 <div class="container mt-2 border text-center">
   <div *ngIf="hero">
     <h2>{{hero.name | uppercase}} Details</h2>
-    <div class="row">
+    <div class="row mb-3">
       <div class="col">
         ID: {{hero.id}}
       </div>
       <div class="col">
-        <label for="hero-name">Hero name: </label>
-          <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+        <div class="input-group">
+          <label for="hero-name" class="input-group-text">Hero name: </label>
+          <input id="hero-name" class="form-control" [(ngModel)]="hero.name" placeholder="name">
+        </div>
       </div>
     </div>
     

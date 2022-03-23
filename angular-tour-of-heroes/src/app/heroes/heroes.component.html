@@ -16,12 +16,13 @@
     </ul>
   </div>
   
-  <div>
-    <label for="new-hero">Hero name: </label>
-    <input id="new-hero" #heroName />
-  
-    <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
-      Add hero
-    </button>
+  <div class="container">
+    <div class="input-group mb-3">
+      <label for="new-hero" class="input-group-text">Hero name:</label>
+      <input id="new-hero" class="form-control" #heroName />
+      <button class="btn btn-outline-secondary" type="button" (click)="add(heroName.value); heroName.value=''">
+        Add Hero
+      </button>
+    </div>
   </div>
 </div>
