@@ -3,8 +3,8 @@
         <div class="col">
             <div class="card">
                 <div class="card-body text-center">
-                    <div class="card-title mb-5"><h2>Top Heroes</h2><hr></div>
-                    <div class="card bg-dark position-relative top-0 start-50 translate-middle m-2" style="width:10rem" *ngFor="let hero of heroes">
+                    <div class="card-title mb-5"><h2>Top <input (keyup)="updateList()" placeholder="5" value="5" type="text" [(ngModel)]="amount" size="1rem"> Heroes</h2><hr></div>
+                    <div class="card bg-dark position-relative top-0 start-50 translate-middle m-2" style="width:10rem" *ngFor="let hero of getDisplayHeroes()">
                         <a class="text-light" routerLink="/detail/{{hero.id}}">{{hero.name}}</a>
                     </div>
                 </div>
