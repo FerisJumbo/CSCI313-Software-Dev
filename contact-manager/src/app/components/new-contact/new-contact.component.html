@@ -1,1 +1,9 @@
-<p>new-contact works!</p>
+<label for="fName">First name</label>
+<input type="text" id="fName" [(ngModel)]="con.fName">
+<label for="lName">Last name</label>
+<input type="text" id="lName" [(ngModel)]="con.lName">
+<label for="phone">Phone number</label>
+<input type="text" id="phone" [(ngModel)]="con.phoneNumber">
+<label for="email">email</label>
+<input type="text" id="email" [(ngModel)]="con.email">
+<button (click)="add()">Add contact</button>

@@ -1,1 +1,13 @@
-<p>contact-list works!</p>
+<div *ngIf="view == 'list'">
+    <div *ngFor="let contact of contacts">
+        <h3>{{contact.fName}} {{contact.lName}}</h3>
+        <h5>Phone: {{contact.phoneNumber}}</h5>
+        <h5>Email: {{contact.email}}</h5>
+        <button (click)="setContact(contact)">Edit Contact</button>
+        <button (click)="delContact(contact)">X</button>
+    </div>
+</div>
+
+<div *ngIf="view == 'edit'">
+    <app-edit-contact [contact]="selectedContact" (edittedContact)="editContact($event)"></app-edit-contact>
+</div>

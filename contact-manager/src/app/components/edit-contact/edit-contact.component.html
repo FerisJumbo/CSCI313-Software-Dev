@@ -1,1 +1,9 @@
-<p>edit-contact works!</p>
+<label for="fName">First name</label>
+<input type="text" id="fName" [(ngModel)]="contact.fName">
+<label for="lName">Last name</label>
+<input type="text" id="lName" [(ngModel)]="contact.lName">
+<label for="phone">Phone number</label>
+<input type="text" id="phone" [(ngModel)]="contact.phoneNumber">
+<label for="email">email</label>
+<input type="text" id="email" [(ngModel)]="contact.email">
+<button (click)="editted()">Edit contact</button>

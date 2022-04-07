@@ -2,10 +2,9 @@
 <button (click)="setView('add')">Add Contact</button>
 
 <div *ngIf="view == 'list'">
-    <div *ngFor="let contact of contacts">
-        <p>{{contact.fName}}</p>
-    </div>
+    <app-contact-list></app-contact-list>
 </div>
+
 <div *ngIf="view == 'add'">
-    <p>world</p>
+    <app-new-contact (addContact)="newContact($event)"></app-new-contact>
 </div>
