@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { contact } from 'src/app/contact';
+import { CONTACTS } from 'src/app/contactsdb';
 
 @Component({
   selector: 'app-navigation',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
+  view: String = 'list';
+
+  contacts: contact[] = CONTACTS;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  setView(view: String): void {
+    this.view = view;
   }
 
 }

@@ -1,1 +1,11 @@
-<p>navigation works!</p>
+<button (click)="setView('list')">Contact List</button>
+<button (click)="setView('add')">Add Contact</button>
+
+<div *ngIf="view == 'list'">
+    <div *ngFor="let contact of contacts">
+        <p>{{contact.fName}}</p>
+    </div>
+</div>
+<div *ngIf="view == 'add'">
+    <p>world</p>
+</div>
