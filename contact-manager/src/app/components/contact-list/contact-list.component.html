@@ -1,10 +1,17 @@
 <div *ngIf="view == 'list'">
     <div *ngFor="let contact of contacts">
-        <h3>{{contact.fName}} {{contact.lName}}</h3>
-        <h5>Phone: {{contact.phoneNumber}}</h5>
-        <h5>Email: {{contact.email}}</h5>
-        <button (click)="setContact(contact)">Edit Contact</button>
-        <button (click)="delContact(contact)">X</button>
+        <div class="container text-center contact-card mt-3">
+            <div class="m-2">
+                <h3 style="display: inline-block">
+                    {{contact.fName}} {{contact.lName}}
+                    <button class="btn btn-outline-dark" (click)="setContact(contact)">Edit Contact</button>
+                    <button class="btn btn-del" (click)="delContact(contact)">X</button>
+                </h3>
+                <h5>Phone: {{contact.phoneNumber}}</h5>
+                <h5>Email: {{contact.email}}</h5>
+                <h5>Friend: {{contact.friend}}</h5>
+            </div>
+        </div>
     </div>
 </div>
 

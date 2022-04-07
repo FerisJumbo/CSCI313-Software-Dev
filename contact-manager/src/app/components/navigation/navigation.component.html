@@ -1,10 +1,20 @@
-<button (click)="setView('list')">Contact List</button>
-<button (click)="setView('add')">Add Contact</button>
-
-<div *ngIf="view == 'list'">
-    <app-contact-list></app-contact-list>
+<div class="top-bar p-2">
+    <div class="container">
+        <div class="mx-auto top-bar" style="width: fit-content;">
+            <button class="btn btn-outline-light" (click)="setView('list')">Contact List</button>
+            <button class="btn btn-outline-light" (click)="setView('add')">Add Contact</button>
+        </div>
+    </div>
 </div>
 
-<div *ngIf="view == 'add'">
-    <app-new-contact (addContact)="newContact($event)"></app-new-contact>
+<div class="container">
+    <div class="container">
+        <div *ngIf="view == 'list'">
+            <app-contact-list></app-contact-list>
+        </div>
+        
+        <div *ngIf="view == 'add'">
+            <app-new-contact (addContact)="newContact($event)"></app-new-contact>
+        </div>
+    </div>
 </div>

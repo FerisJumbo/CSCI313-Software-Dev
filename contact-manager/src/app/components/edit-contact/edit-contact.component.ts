@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { contact } from 'src/app/contact';
+import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-edit-contact',
@@ -12,13 +13,17 @@ export class EditContactComponent implements OnInit {
 
   @Output() edittedContact = new EventEmitter<contact>();
 
-  constructor() { }
+  constructor(private contactServ: ContactService) { }
 
   ngOnInit(): void {
   }
 
   editted(): void {
     this.edittedContact.emit(this.contact);
+  }
+
+  getContacts(): contact[] {
+    return this.contactServ.getContacts();
   }
 
 }

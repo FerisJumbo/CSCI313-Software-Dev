@@ -1,9 +1,26 @@
-<label for="fName">First name</label>
-<input type="text" id="fName" [(ngModel)]="contact.fName">
-<label for="lName">Last name</label>
-<input type="text" id="lName" [(ngModel)]="contact.lName">
-<label for="phone">Phone number</label>
-<input type="text" id="phone" [(ngModel)]="contact.phoneNumber">
-<label for="email">email</label>
-<input type="text" id="email" [(ngModel)]="contact.email">
-<button (click)="editted()">Edit contact</button>
+<div class="container m-3">
+    <div class="input-group mb-2">
+        <span class="input-group-text">First Name:</span>
+        <input class="form-control" type="text" id="fName" [(ngModel)]="contact.fName">
+    </div>
+    <div class="input-group mb-2">
+        <span class="input-group-text">Last Name:</span>
+        <input class="form-control" type="text" id="lName" [(ngModel)]="contact.lName">
+    </div>
+    <div class="input-group mb-2">
+        <span class="input-group-text">Phone Number:</span>
+        <input class="form-control" type="text" id="phone" [(ngModel)]="contact.phoneNumber">
+    </div>
+    <div class="input-group mb-2">
+        <span class="input-group-text">Email:</span>
+        <input class="form-control" type="text" id="email" [(ngModel)]="contact.email">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text">Friend:</span>
+        <select class="form-control custom-select" id="friend" [(ngModel)]="contact.friend">
+            <option *ngFor="let contact of getContacts()" value="{{contact.fName}} {{contact.lName}}">{{contact.fName}} {{contact.lName}}</option>
+        </select>
+    </div>
+    <button class="btn btn-outline-primary" style="width: 100%;" (click)="editted()">Edit Contact</button>
+</div>
+

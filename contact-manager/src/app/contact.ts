@@ -3,4 +3,5 @@ export class contact {
     lName: String = "";
     phoneNumber: String = "";
     email: String = "";
+    friend: String = "";
 }
