@@ -7,6 +7,7 @@ import { ContactListComponent } from './components/contact-list/contact-list.com
 import { EditContactButtonComponent } from './components/buttons/edit-contact-button/edit-contact-button.component';
 import { NewContactComponent } from './components/new-contact/new-contact.component';
 import { EditContactComponent } from './components/edit-contact/edit-contact.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditContactComponent } from './components/edit-contact/edit-contact.com
     EditContactComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
